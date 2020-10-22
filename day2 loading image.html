@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loading | image </title>
+</head>
+<style type="text/css">
+*{
+          margin: 0;
+          padding: 0;
+      }	
+.loading{
+          width: 100%;
+          height: 100vh;
+          background-color: #2e2e2e;
+          position: fixed;
+          display: flex
+          align-items:center;
+          justify-content: center;
+           }	
+         
+	.load{
+          width: 80px;
+          display: flex;
+          flex-wrap: wrap;
+          position: absolute;
+         top: 35%;
+         left: 45%;
+         animation:rotate 3s linear infinite;
+      }
+       @keyframes rotate {
+          to{
+              transform:rotate(360deg);
+          }	
+         }	
+    .load span{
+          width: 32px;
+          height: 32px;
+          background-color: red;
+          margin: 4px;
+          animation: scale 1.5s linear infinite;
+      }
+      @keyframes scale{
+      	50%{
+      		transform: scale(1.2);
+      	}
+
+      	 }
+      .load span:nth-child(1){
+          border-radius:50% 50% 0 50%;
+          background-color: #8e44ad;
+          transform-orgin:bottom-right;
+      }
+            .load span:nth-child(2){
+          border-radius:50% 50% 50% 0;
+          background-color: #e74c3c;
+          transform-orgin:bottom-left;
+          animation-delay: .5s;
+      }
+            .load span:nth-child(3){
+          border-radius:50% 0 50% 50%;
+          background-color: #f1c40f;
+          transform-orgin:top-right;
+           animation-delay:1.5s;
+      }
+            .load span:nth-child(4){
+          border-radius:0 50% 50% 50%;
+          background-color: #2ecc71; 
+          transform-orgin:top-left;
+           animation-delay:1s;
+      }
+
+</style>
+
+<body>
+<div class="loading">
+	<div class="load">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	 </div>
+</div>
+</body>
+</html>
